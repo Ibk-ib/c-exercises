@@ -1,5 +1,4 @@
-﻿Console.WriteLine("Hello, World!");
-
+﻿//Console.WriteLine("Hello, World!");
 
 //int? num1;
 //int? num2;
@@ -171,41 +170,153 @@
 //Console.WriteLine("The total months used to clear the loan is {0} months", months);
 
 
-                                               //Temperature Sensor Threshold Audit
+//Temperature Sensor Threshold Audit
 
-double[] temperatures = { 3.2, 4.0, 8.5, 7.1, 1.8, 6.4, 9.0 };
-double safeRange1 = 2.0;
-double safeRange2 = 8.0;
-int fallOutReadings = 0;
+//double[] temperatures = { 3.2, 4.0, 8.5, 7.1, 1.8, 6.4, 9.0 };
+//double safeRange1 = 2.0;
+//double safeRange2 = 8.0;
+//int fallOutReadings = 0;
 
-foreach (double temperature in temperatures)
-{
-    if (temperature < safeRange1 || temperature > safeRange2)
-    {
-        fallOutReadings++;
-    }
-}
-Console.WriteLine("The number of fallout readings is {0}", fallOutReadings);
+//foreach (double temperature in temperatures)
+//{
+//    if (temperature < safeRange1 || temperature > safeRange2)
+//    {
+//        fallOutReadings++;
+//    }
+//}
+//Console.WriteLine("The number of fallout readings is {0}", fallOutReadings);
 
 
 //Solar Battery Charge 
 
+//int charge = 35;
+//int day = 0;
 
-int charge = 35;
-int day = 0;
+//while (charge < 100)
+//{
+//    day++;
 
-while (charge < 100)
+//    charge += 14;
+//    charge -= 9;
+
+//    if (charge >= 100)
+//    {
+//        charge = 100;
+//        break;
+//    }
+//}
+//Console.WriteLine("Day {0}", day);
+
+
+//Student Grade Calculator  
+
+//int[] scores = { 78, 45, 92, 63, 88, 54, 39, 71 };
+//int distinction = 0;
+//int pass = 0;
+//int fail = 0;
+
+//foreach (int score in scores)
+//{
+//    if (score >= 75)
+//    {
+//        distinction++;
+//    }
+//    else if (score >= 50 && score <= 74)
+//    {
+//        pass++;
+//    }
+//    else
+//    {
+//        fail++;
+//    }
+//}
+//Console.WriteLine("We have {0} students with distinction, {1} students passed and {2} students failed", distinction, pass, fail);
+
+
+
+
+//Vehicle decelaration
+
+
+//double speed = 180;
+//double interval = 0;
+
+//while ( speed > 0)
+//{
+//    speed -= speed * 0.2;
+//    interval++;
+
+//    if ( interval >=3)
+//    {
+//        speed -= 15;
+
+//    }
+//}
+//Console.WriteLine("Total Intervals is {0}", interval);
+
+
+//Bank account overdraft
+
+
+//double balance = 500;
+//double overdraft = 0;
+//double[] transactions = { -200, -400, 300, -350, 100 };
+
+//foreach( double transaction in transactions) {
+
+//    balance += transaction;
+
+//    if (balance < 0) {
+
+//        overdraft++;
+
+//    }
+//}
+//Console.WriteLine("Overdraft occurred {0} times", overdraft);
+
+
+
+//Submersible Staged Descent
+
+
+
+int depth = 0;
+int  stages = 0;
+while (depth < 2000)
 {
-    day++;
-
-    charge += 14;
-    charge -= 9;
-
-    if (charge >= 100)
+    if (depth >= 800 && depth < 1600)
     {
-        charge = 100;
-        break;
+        depth += 40;
+    } else
+    {
+        depth += 100;
     }
-}
 
-Console.WriteLine("Day is {0}", day);
+    stages++;
+}
+ Console.WriteLine("The total stages used to reach the target depth is {0}", stages);
+
+
+
+
+
+
+//Server Recovery Simulation
+
+//int servers = 40;
+//int hours = 0;
+
+//while(hours < 10)
+//{
+//    servers -= 3;
+//    hours++;
+
+//    if (hours >= 5)
+//    {
+//        servers += 3;
+//    } else
+//    {
+//        servers += 1;
+//    }
+//}
+//Console.WriteLine("Servers remaining after {0} hours is {1}", hours, servers);
