@@ -102,135 +102,137 @@
 
 //Water Reservoir level tracker
 
-//int litres = 120;
-//int days = 0;
+int litres = 120;
+int days = 0;
 
-//while (litres < 500 && litres >= 50)
-//{
+while (litres < 500 && litres >= 50)
+{
 
-//    days++;
+    days++;
 
-//    litres += 85;
+    litres += 85;
 
-//    if (days % 2 == 0)
-//    {
-//        litres -= 65;
-//    }
-//    else
-//    {
-//        litres -= 40;
-//    }
+    if (days % 2 == 0)
+    {
+        litres -= 65;
+    }
+    else
+    {
+        litres -= 40;
+    }
 
-//}
-//Console.WriteLine("The final volume is {0} on the {1}th day", litres, days);
+}
+Console.WriteLine("The final volume is {0} on the {1}th day", litres, days);
 
 
 
 //Process Inventory Orders 
 
-//int stock = 300;
-//int[] orders = { 50, 120, 80, 100, 40 };
-//int fulfilledOrders = 0;
+int stock = 300;
+int[] orders = { 50, 120, 80, 100, 40 };
+int fulfilledOrders = 0;
 
-//foreach (int order in orders)
-//{
-//    if (order <= stock)
-//    {
-//        stock -= order;
-//        fulfilledOrders++;
-//    }
-//    else
-//    {
-//        Console.WriteLine("Backordered");
-//    }
-//}
-//Console.WriteLine("Total Fulfilled Orders: {0}, Remaining Stock: {1}", fulfilledOrders, stock);
+foreach (int order in orders)
+{
+    if (order <= stock)
+    {
+        stock -= order;
+        fulfilledOrders++;
+    }
+    else
+    {
+        Console.WriteLine("Backordered");
+    }
+}
+Console.WriteLine("Total Fulfilled Orders: {0}, Remaining Stock: {1}", fulfilledOrders, stock);
 
 
 
 //Loan Payoff calculator
 
-//double loan = 1000;
-//double interestRate = 0.02;
-//double payment = 200;
-//int months = 0;
+double loan = 1000;
+double interestRate = 0.02;
+double payment = 200;
+int months = 0;
 
-//while (loan > 0) {
-//    loan += loan * interestRate;
+while (loan > 0)
+{
+    loan += loan * interestRate;
 
-//    if (loan > payment)
-//    {
-//        loan -= payment;
-//    } else
-//    {
-//        loan = 0;
-//    }
-//    months++;
-//}
-//Console.WriteLine("The total months used to clear the loan is {0} months", months);
+    if (loan > payment)
+    {
+        loan -= payment;
+    }
+    else
+    {
+        loan = 0;
+    }
+    months++;
+}
+Console.WriteLine("The total months used to clear the loan is {0} months", months);
 
 
 //Temperature Sensor Threshold Audit
 
-//double[] temperatures = { 3.2, 4.0, 8.5, 7.1, 1.8, 6.4, 9.0 };
-//double safeRange1 = 2.0;
-//double safeRange2 = 8.0;
-//int fallOutReadings = 0;
+double[] temperatures = { 3.2, 4.0, 8.5, 7.1, 1.8, 6.4, 9.0 };
+double safeRange1 = 2.0;
+double safeRange2 = 8.0;
+int fallOutReadings = 0;
 
-//foreach (double temperature in temperatures)
-//{
-//    if (temperature < safeRange1 || temperature > safeRange2)
-//    {
-//        fallOutReadings++;
-//    }
-//}
-//Console.WriteLine("The number of fallout readings is {0}", fallOutReadings);
+foreach (double temperature in temperatures)
+{
+    if (temperature < safeRange1 || temperature > safeRange2)
+    {
+        fallOutReadings++;
+    }
+}
+Console.WriteLine("The number of fallout readings is {0}", fallOutReadings);
 
 
 //Solar Battery Charge 
 
-//int charge = 35;
-//int day = 0;
+int charge = 35;
+int day = 0;
 
-//while (charge < 100)
-//{
-//    day++;
+while (charge < 100)
+{
+    day++;
 
-//    charge += 14;
-//    charge -= 9;
+    charge += 14;
+    charge -= 9;
 
-//    if (charge >= 100)
-//    {
-//        charge = 100;
-//        break;
-//    }
-//}
-//Console.WriteLine("Day {0}", day);
+    if (charge >= 100)
+    {
+        charge = 100;
+        break;
+    }
+}
+Console.WriteLine("Day {0}", day);
 
 
 //Student Grade Calculator  
 
-//int[] scores = { 78, 45, 92, 63, 88, 54, 39, 71 };
-//int distinction = 0;
-//int pass = 0;
-//int fail = 0;
+int[] scores = { 78, 45, 92, 63, 88, 54, 39, 71 };
+int distinction = 0;
+int pass = 0;
+int fail = 0;
 
-//foreach (int score in scores)
-//{
-//    if (score >= 75)
-//    {
-//        distinction++;
-//    }
-//    else if (score >= 50 && score <= 74)
-//    {
-//        pass++;
-//    }
-//    else
-//    {
-//        fail++;
-//    }
-//}
-//Console.WriteLine("We have {0} students with distinction, {1} students passed and {2} students failed", distinction, pass, fail);
+foreach (int score in scores)
+{
+    if (score >= 75)
+    {
+        distinction++;
+    }
+    else if (score >= 50 && score <= 74)
+    {
+        pass++;
+    }
+    else
+    {
+        fail++;
+    }
+}
+Console.WriteLine("We have {0} students with distinction, {1} students passed and {2} students failed", distinction, pass, fail);
 
 
 
@@ -238,41 +240,43 @@
 //Vehicle decelaration
 
 
-//double speed = 180;
-//double interval = 0;
+double speed = 180;
+double interval = 0;
 
-//while ( speed > 0)
-//{
-//    speed -= speed * 0.2;
-//    interval++;
+while (speed > 0)
+{
+    speed -= speed * 0.2;
+    interval++;
 
-//    if ( interval >=3)
-//    {
-//        speed -= 15;
+    if (interval >= 3)
+    {
+        speed -= 15;
 
-//    }
-//}
-//Console.WriteLine("Total Intervals is {0}", interval);
+    }
+}
+Console.WriteLine("Total Intervals is {0}", interval);
 
 
 //Bank account overdraft
 
 
-//double balance = 500;
-//double overdraft = 0;
-//double[] transactions = { -200, -400, 300, -350, 100 };
+double balance = 500;
+double overdraft = 0;
+double[] transactions = { -200, -400, 300, -350, 100 };
 
-//foreach( double transaction in transactions) {
+foreach (double transaction in transactions)
+{
 
-//    balance += transaction;
+    balance += transaction;
 
-//    if (balance < 0) {
+    if (balance < 0)
+    {
 
-//        overdraft++;
+        overdraft++;
 
-//    }
-//}
-//Console.WriteLine("Overdraft occurred {0} times", overdraft);
+    }
+}
+Console.WriteLine("Overdraft occurred {0} times", overdraft);
 
 
 
@@ -281,20 +285,21 @@
 
 
 int depth = 0;
-int  stages = 0;
+int stages = 0;
 while (depth < 2000)
 {
     if (depth >= 800 && depth < 1600)
     {
         depth += 40;
-    } else
+    }
+    else
     {
         depth += 100;
     }
 
     stages++;
 }
- Console.WriteLine("The total stages used to reach the target depth is {0}", stages);
+Console.WriteLine("The total stages used to reach the target depth is {0}", stages);
 
 
 
@@ -303,20 +308,54 @@ while (depth < 2000)
 
 //Server Recovery Simulation
 
-//int servers = 40;
-//int hours = 0;
+int servers = 40;
+int hours = 0;
 
-//while(hours < 10)
-//{
-//    servers -= 3;
-//    hours++;
+while (hours < 10)
+{
+    servers -= 3;
+    hours++;
 
-//    if (hours >= 5)
-//    {
-//        servers += 3;
-//    } else
-//    {
-//        servers += 1;
-//    }
-//}
-//Console.WriteLine("Servers remaining after {0} hours is {1}", hours, servers);
+    if (hours >= 5)
+    {
+        servers += 3;
+    }
+    else
+    {
+        servers += 1;
+    }
+}
+Console.WriteLine("Servers remaining after {0} hours is {1}", hours, servers);
+
+
+
+
+int[] numbers = { 1, 2, 3, 4, 5 };
+for (int i = 0; i < numbers.Length; i++) {
+    Console.WriteLine(numbers[i]);
+}
+
+
+string password = "Lenovo";
+string guessPassword?;
+Console.WriteLine("Guess the password, it is a name of a laptop brand: ");
+guessPassword = Console.ReadLine();
+int attempts = 1;
+
+
+while (guessPassword != password)
+{
+    Console.WriteLine("Incorrect password. Try again.");
+    guessPassword = Console.ReadLine();
+    attempts++;
+    if (attempts == 5)
+    {
+        Console.WriteLine("Too many incorrect attempts. Access denied.");
+        break;
+    }
+}
+
+if (guessPassword == password)
+{
+    Console.WriteLine("You guessed the password correctly!");
+}
