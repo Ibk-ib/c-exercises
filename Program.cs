@@ -336,26 +336,37 @@ for (int i = 0; i < numbers.Length; i++) {
 }
 
 
-string password = "Lenovo";
-string guessPassword?;
-Console.WriteLine("Guess the password, it is a name of a laptop brand: ");
-guessPassword = Console.ReadLine();
-int attempts = 1;
+//string password = "Lenovo";
+//string guessPassword;
+//Console.WriteLine("Guess the password, it is a name of a laptop brand: ");
+//guessPassword = Console.ReadLine();
+//int attempts = 1;
 
 
-while (guessPassword != password)
+//while (guessPassword != password)
+//{
+//    Console.WriteLine("Incorrect password. Try again.");
+//    guessPassword = Console.ReadLine();
+//    attempts++;
+//    if (attempts == 5)
+//    {
+//        Console.WriteLine("Too many incorrect attempts. Access denied.");
+//        break;
+//    }
+
+//}
+
+//if (guessPassword == password)
+//{
+//    Console.WriteLine("You guessed the password correctly!");
+//}
+
+
+Car properties = new Car
 {
-    Console.WriteLine("Incorrect password. Try again.");
-    guessPassword = Console.ReadLine();
-    attempts++;
-    if (attempts == 5)
-    {
-        Console.WriteLine("Too many incorrect attempts. Access denied.");
-        break;
-    }
-}
-
-if (guessPassword == password)
-{
-    Console.WriteLine("You guessed the password correctly!");
-}
+    Name = "Toyota",
+    Model = "Camry",
+    Year = 2020,
+    Color = "Red"
+};
+properties.DisplayCarInfo();
