@@ -370,3 +370,43 @@ Car properties = new Car
     Color = "Red"
 };
 properties.DisplayCarInfo();
+
+
+
+
+Student info = new Student
+{
+    Name = "John Doe",
+    Age = 20,
+    Department = "Computer Science",
+    Level = 200
+};
+info.DisplayStudentInfo();
+
+
+
+Calculator calc = new Calculator();
+
+ int sum = calc.Add(5, 3);
+
+ int subtract = calc.Subtract(5, 3);
+
+ int times = calc.Multiply(6, 7);
+
+ double div = calc.Divide(10, 2);
+
+Console.WriteLine("Sum: {0}", sum);
+Console.WriteLine("Subtract: {0}", subtract);
+Console.WriteLine("Multiply: {0}", times);
+Console.WriteLine("Divide: {0}", div);
+
+
+BankAccount account = new BankAccount { 
+    
+    AccountNumber = "123456789",
+    AccountName = "Ibraheem",
+    Balance = 500000
+};
+account.Deposit(100000);
+account.Withdraw(200000);
+account.DisplayAccountInfo();
