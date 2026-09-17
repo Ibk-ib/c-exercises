@@ -410,3 +410,187 @@ BankAccount account = new BankAccount {
 account.Deposit(100000);
 account.Withdraw(200000);
 account.DisplayAccountInfo();
+
+
+int[] sumArray = {2, 4, 6, 8, 10 };
+int total = 0;
+
+foreach (int num in sumArray)
+{
+    total += num;
+}
+Console.WriteLine("Sum: {0}", total);
+
+
+int[] maxArray = { 3, 7, 1, 9, 4 };
+int maxValue = maxArray.Max();
+Console.WriteLine("Maximum value: {0}", maxValue);
+
+
+int[] reverseArray = { 1, 2, 3, 4, 5 };
+Array.Reverse(reverseArray);
+foreach (int rev in reverseArray)
+{
+    Console.WriteLine(rev);
+}
+
+int[] evenOdd = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+int odd = 0;
+int even = 0;
+foreach (int evodd in evenOdd) { 
+    if (evodd % 2 == 0)
+    {
+        even++;
+    }
+    else
+    {
+        odd++;
+    }
+};
+Console.WriteLine("Even numbers: {0}, Odd numbers: {1}", even, odd);
+
+
+int[] sortArray = { 1, 2, 3, 4, 5 };
+
+bool isSorted = true;
+
+for (int i = 0; i < sortArray.Length - 1; i++)
+{
+    if (sortArray[i] > sortArray[i + 1])
+    {
+        isSorted = false;
+        Console.WriteLine("The array is not sorted in ascending order.");
+        break;
+    }
+}
+
+if (isSorted)
+{
+    Console.WriteLine("The array is sorted in ascending order.");
+}
+
+
+int[] duplicateArray = { 1, 2, 3, 2, 4, 5, 1 };
+
+for (int i = 0; i < duplicateArray.Length; i++)
+{
+    for (int j = i + 1; j < duplicateArray.Length; j++)
+    {
+        if (duplicateArray[i] == duplicateArray[j])
+        {
+            Console.WriteLine("Duplicate value found: {0}", duplicateArray[i]);
+        }
+    }
+}
+
+
+int[] shiftArray = { 7, 8, 9, 5, 6 };
+int last = shiftArray[shiftArray.Length - 1];
+
+for (int i = shiftArray.Length - 1; i > 0; i--) { 
+    shiftArray[i] = shiftArray[i - 1];
+}
+shiftArray[0] = last;
+Console.WriteLine(String.Join(", ", shiftArray));
+
+
+
+int[] occurMost = { 3, 4, 5, 3, 6, 3, 7 };
+int target = 3;
+int count = 0;
+
+for (int i = 0; i < occurMost.Length; i++)
+{
+    if (occurMost[i] == target)
+    {
+        count++;
+    }
+}
+
+Console.WriteLine("The number {0} appears {1} times.", target, count);
+
+
+
+int[] array1 = { 1, 3, 5 };
+int[] array2 = { 2, 4, 6 };
+
+int[] mergedArray = new int[array1.Length + array2.Length];
+
+for (int i = 0; i < array1.Length; i++)
+{
+    mergedArray[i] = array1[i];
+}
+
+for (int i = 0; i < array2.Length; i++)
+{
+    mergedArray[array1.Length + i] = array2[i];
+}
+
+Array.Sort(mergedArray);
+
+Console.WriteLine(string.Join(", ", mergedArray));
+
+
+
+
+int[] findSecondLargest = { 10, 5, 8, 20, 15 };
+
+Array.Sort(findSecondLargest);
+
+int secondLargest = findSecondLargest[findSecondLargest.Length - 2];
+
+Console.WriteLine("Second largest: {0}", secondLargest);
+
+
+
+void FizzBuzz()
+{
+    for (int i = 1; i <= 100; i++)
+    {
+        if (i % 3 == 0 && i % 5 == 0)
+        {
+            Console.WriteLine("FizzBuzz");
+        }
+        else if (i % 3 == 0)
+        {
+            Console.WriteLine("Fizz");
+        }
+        else if (i % 5 == 0)
+        {
+            Console.WriteLine("Buzz");
+        }
+        else
+        {
+            Console.WriteLine(i);
+        }
+    }
+}
+FizzBuzz();
+
+
+PalindromeChecker palindrome = new PalindromeChecker();
+
+
+Console.WriteLine(palindrome.IsPalindrome("Madam"));
+Console.WriteLine(palindrome.IsPalindrome("Hello"));
+
+
+
+int? enterNumb;
+Console.WriteLine("Enter a number to check if it is positive, negative or zero: ");
+enterNumb = Convert.ToInt16(Console.ReadLine());
+
+if (enterNumb > 0)
+{
+    Console.WriteLine("{0} is a positive number.", enterNumb);
+}
+else if (enterNumb < 0)
+{
+    Console.WriteLine("{0} is a negative number.", enterNumb);
+}
+else
+{
+    Console.WriteLine("{0} is zero.", enterNumb);
+}
+
+

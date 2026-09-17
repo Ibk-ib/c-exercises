@@ -94,3 +94,20 @@ public class BankAccount {
         Console.WriteLine("Account Balance: {0}", Balance);
     }
 }
+
+
+public class PalindromeChecker
+{
+    public bool IsPalindrome(string input)
+    {
+        input = input.ToLower().Replace(" ", "");
+
+        string reversed = "";
+
+        for (int i = input.Length - 1; i >= 0; i--)
+        {
+            reversed += input[i];
+        }
+        return input == reversed;
+    }
+}
