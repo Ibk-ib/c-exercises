@@ -594,3 +594,79 @@ else
 }
 
 
+
+Console.WriteLine("Enter the first number: ");
+int numone = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("Enter the second number: ");
+int numtwo = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("Enter the third number: ");
+int numthree = Convert.ToInt32(Console.ReadLine());
+
+if (numone >= numtwo && numone >= numthree)
+{
+    Console.WriteLine("The largest number is " + numone);
+}
+else if (numtwo >= numone && numtwo >= numthree)
+{
+    Console.WriteLine("The largest number is " + numtwo);
+}
+else
+{
+    Console.WriteLine("The largest number is " + numthree);
+}
+
+
+Console.WriteLine("Enter a day number between 1-7: ");
+int dayWeek = Convert.ToInt32(Console.ReadLine());
+
+switch (dayWeek)
+{
+    case 1:
+        Console.WriteLine("Day 1 is Monday.");
+        break;
+
+    case 2:
+        Console.WriteLine("Day 2 is Tuesday.");
+        break;
+
+    case 3:
+        Console.WriteLine("Day 3 is Wednesday.");
+        break;
+
+    case 4:
+        Console.WriteLine("Day 4 is Thursday.");
+        break;
+
+    case 5:
+        Console.WriteLine("Day 5 is Friday.");
+        break;
+
+    case 6:
+        Console.WriteLine("Day 6 is Saturday.");
+        break;
+
+    case 7:
+        Console.WriteLine("Day 7 is Sunday.");
+        break;
+
+    default:
+        Console.WriteLine("Invalid input. Please enter a number from 1 to 7.");
+        break;
+}
+
+
+
+Console.WriteLine("Enter the first number: ");
+int firstNumber = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Enter the second number: ");
+int secondNumber = Convert.ToInt32(Console.ReadLine());
+
+bool isGreater = firstNumber > secondNumber;
+bool isEqual = firstNumber == secondNumber;
+bool isPositive = firstNumber > 0 || secondNumber > 0;
+
+Console.WriteLine("Is the first number greater than the second? {0}", isGreater);
+Console.WriteLine("Are both numbers equal? {0}", isEqual);
+Console.WriteLine("Is at least one of the numbers positive? {0}", isPositive);
